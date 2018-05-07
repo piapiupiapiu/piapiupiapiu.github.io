@@ -5,16 +5,19 @@
   
 
   
-  <title>php的闭包用法 | piapia</title>
+  <title>piapia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="php的闭包用法">
+  <meta name="description" content="–title: PHP PHP的闭包使用实例1：它的实际运行过程是这样的，$attrib是一个数组和闭包函数综合体，…$attrib前面…会自动将$attrib中的第一个非闭包值取出这里是一个数组，后面的第二个值是一个闭包，它会直接传递给闭包，并将刚刚取出的非闭包值传递给闭包函数当做参数。1234567891011121314151617$attribs = [          &apos;name&apos; =">
+<meta property="og:type" content="article">
+<meta property="og:title" content="piapia">
 <meta property="og:url" content="http://yoursite.com/2018/05/07/php的闭包用法/index.html">
 <meta property="og:site_name" content="piapia">
+<meta property="og:description" content="–title: PHP PHP的闭包使用实例1：它的实际运行过程是这样的，$attrib是一个数组和闭包函数综合体，…$attrib前面…会自动将$attrib中的第一个非闭包值取出这里是一个数组，后面的第二个值是一个闭包，它会直接传递给闭包，并将刚刚取出的非闭包值传递给闭包函数当做参数。1234567891011121314151617$attribs = [          &apos;name&apos; =">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-07T13:56:27.195Z">
+<meta property="og:updated_time" content="2018-05-07T13:52:56.531Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="php的闭包用法">
+<meta name="twitter:title" content="piapia">
+<meta name="twitter:description" content="–title: PHP PHP的闭包使用实例1：它的实际运行过程是这样的，$attrib是一个数组和闭包函数综合体，…$attrib前面…会自动将$attrib中的第一个非闭包值取出这里是一个数组，后面的第二个值是一个闭包，它会直接传递给闭包，并将刚刚取出的非闭包值传递给闭包函数当做参数。1234567891011121314151617$attribs = [          &apos;name&apos; =">
   
     <link rel="alternate" href="/atom.xml" title="piapia" type="application/atom+xml">
   
@@ -64,46 +67,29 @@
         <section id="main"><article id="post-php的闭包用法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/07/php的闭包用法/" class="article-date">
-  <time datetime="2018-05-07T13:56:27.000Z" itemprop="datePublished">2018-05-07</time>
+  <time datetime="2018-05-07T13:58:33.709Z" itemprop="datePublished">2018-05-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      php的闭包用法
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>–<br>title: PHP</p>
+<h2 id="PHP的闭包使用"><a href="#PHP的闭包使用" class="headerlink" title="PHP的闭包使用"></a>PHP的闭包使用</h2><h3 id="实例1：它的实际运行过程是这样的，-attrib是一个数组和闭包函数综合体，…-attrib前面…会自动将-attrib中的第一个非闭包值取出这里是一个数组，后面的第二个值是一个闭包，它会直接传递给闭包，并将刚刚取出的非闭包值传递给闭包函数当做参数。"><a href="#实例1：它的实际运行过程是这样的，-attrib是一个数组和闭包函数综合体，…-attrib前面…会自动将-attrib中的第一个非闭包值取出这里是一个数组，后面的第二个值是一个闭包，它会直接传递给闭包，并将刚刚取出的非闭包值传递给闭包函数当做参数。" class="headerlink" title="实例1：它的实际运行过程是这样的，$attrib是一个数组和闭包函数综合体，…$attrib前面…会自动将$attrib中的第一个非闭包值取出这里是一个数组，后面的第二个值是一个闭包，它会直接传递给闭包，并将刚刚取出的非闭包值传递给闭包函数当做参数。"></a>实例1：它的实际运行过程是这样的，$attrib是一个数组和闭包函数综合体，…$attrib前面…会自动将$attrib中的第一个非闭包值取出这里是一个数组，后面的第二个值是一个闭包，它会直接传递给闭包，并将刚刚取出的非闭包值传递给闭包函数当做参数。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$attribs</span> = [  </span><br><span class="line">        <span class="string">'name'</span> =&gt; <span class="string">'first_name'</span>,  </span><br><span class="line">        <span class="string">'value'</span> =&gt; <span class="string">'Edward'</span>  </span><br><span class="line">    ];  </span><br><span class="line"><span class="variable">$ex</span> = <span class="keyword">function</span> (<span class="variable">$t</span>) use (<span class="variable">$attribs</span>) &#123;    // ... <span class="keyword">then</span> we <span class="string">'use'</span> the actual array here  </span><br><span class="line">foreach(array_keys(<span class="variable">$attribs</span>) as <span class="variable">$k</span> =&gt; <span class="variable">$v</span>)&#123;  </span><br><span class="line">    <span class="keyword">if</span>(current(<span class="variable">$t</span>) == <span class="variable">$v</span>)&#123;  </span><br><span class="line">        <span class="built_in">return</span>   </span><br><span class="line">  </span><br><span class="line">        <span class="variable">$attribs</span>[<span class="variable">$v</span>];  </span><br><span class="line">  </span><br><span class="line"> &#125;&#125; &#125;;  </span><br><span class="line"><span class="keyword">function</span> getValues(<span class="variable">$request</span>,Closure <span class="variable">$next</span>)&#123;   </span><br><span class="line"><span class="built_in">return</span> <span class="variable">$next</span>(<span class="variable">$request</span>);  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="variable">$attrib</span> = [array(<span class="string">'attr'</span>=&gt;<span class="string">'value'</span>),<span class="variable">$ex</span>];  </span><br><span class="line">print_r(getValues(...<span class="variable">$attrib</span>));</span><br></pre></td></tr></table></figure>
+<p>–</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/07/php的闭包用法/" data-id="cjgwb7t8200014w6trrehxz8y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/07/php的闭包用法/" data-id="cjgwbayod00006g6t0n5qicic" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2018/05/07/php的闭包使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -136,11 +122,7 @@
       <ul>
         
           <li>
-            <a href="/2018/05/07/php的闭包用法/">php的闭包用法</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/07/php的闭包使用/">(no title)</a>
+            <a href="/2018/05/07/php的闭包用法/">(no title)</a>
           </li>
         
       </ul>
